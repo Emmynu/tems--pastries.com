@@ -1,0 +1,144 @@
+    //    fromLocalStorage = JSON.parse(localStorage.getItem("contactIssues"))
+
+        //     console.log(fromLocalStorage)
+        //     let list = ""
+        //     fromLocalStorage.map((data)=>{
+        //         const {name,email,description} = data
+        //       return(
+        //      list += 
+        //         `
+        //         <div>
+        //            <h1>${name}<h1>
+        //             <h1>${email}<h1>
+        //             <h1 style='font-size:10px;   '>${description}<h1>
+        //             </div>`
+        //       )
+        //     })
+
+        //     document.querySelector(".name").innerHTML +=  list
+
+        function increment(id){
+    let searchItems = numbersOfItemsToBeBought.find((item) => item.id === id)
+    if(searchItems === undefined){
+        numbersOfItemsToBeBought.push({
+            id:id,
+            item:1
+        })
+    }
+    else{
+        searchItems.item += 1
+    }
+    displayQuantity(id)
+     localStorage.setItem("quantity",JSON.stringify(numbersOfItemsToBeBought))
+}
+
+function decrement(id){
+    let searchItems = numbersOfItemsToBeBought.find((item) => item.id === id)
+
+    if(searchItems === 0){
+        return
+    }
+    else{
+        searchItems.item -= 1
+    }
+
+    displayQuantity(id)
+     localStorage.setItem("quantity",JSON.stringify(numbersOfItemsToBeBought))
+}
+
+function displayQuantity(id){
+    let searchItem = numbersOfItemsToBeBought.find((item)=> item.id === id)
+
+    document.getElementById(id).innerHTML = searchItem.item
+}
+
+//  localStorage.clear()
+
+
+
+let basket2 = JSON.parse(localStorage.getItem("quantity"))
+let displayCart = document.querySelector(".display-cart")
+basket2 = basket2.filter((x)=>x.item !== 0)
+
+function displayCartItems(){
+    if(numbersOfItemsToBeBought.length !== 0){
+        return displayCart.innerHTML = numbersOfItemsToBeBought.map((x)=>{
+            console.log(x)
+            const {id,item} = x
+            let search = products.find((y)=>y.id === id) || []
+            return `
+            <div class="cart-container">
+            <div class="image-container">
+                <img src=${search.img} alt="" class="cart-image">
+            </div>
+            <div class="item-content">
+                <h2>${search.title}</h2>
+                <h3>$${search.price * x.item}</h3>
+                <button onclick="removeItem(id)">remove</button>
+            </div>
+            <div class="quantity">
+                <h2>${x.item}</h2>
+            </div>
+           </div>
+            `
+        })
+    }
+    else{
+        displayCart.innerHTML = ""
+
+    }
+}
+
+displayCartItems()
+
+function removeItem(id){
+    let selectedItem = id
+    console.log(selectedItem.id)
+
+    basket = basket.filter((x)=> x.id !== selectedItem.id)
+    localStorage.setItem("quantity",JSON.stringify(numbersOfItemsToBeBought))
+
+}
+
+ document.querySelector("#cart").addEventListener("click",function(){
+     document.querySelector(".display-cart-items").classList.add("display")
+     document.querySelector(".display-cart-items").classList.add("transition")
+ })
+
+ document.querySelector(".cancel-btn-container").addEventListener("click",function(){
+     document.querySelector(".display-cart-items").classList.remove("display")
+     document.querySelector(".display-cart-items").classList.add("transition")
+ })
+
+ document.querySelector(".navigation-bar-container").addEventListener("click",function(){
+    document.querySelector(".pages-container-800px").classList.toggle("display")
+    document.querySelector(".navigation-bar-container").classList.toggle("transition")
+})
+//localStorage.clear()
+
+
+
+
+
+  <div class="quantity">
+                <div class="minus-container">
+                    <button  onclick="decrement(${id})">-</button>
+                </div>
+
+                <div class="quantity-container" id=${id}>
+                    ${item}
+                </div>
+
+                <div class="plus-container">
+                    <button  onclick="increment(${id})">+</button>
+                </div>
+            </div>
+
+
+            function displayQuantity(id){
+    let searchItem = itemsInCart.find((item)=> item.id === id)
+
+    document.querySelectorAll("item").forEach(item => {
+        item.innerHTML = searchItem.item
+    });
+}

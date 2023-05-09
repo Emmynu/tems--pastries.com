@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Website</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body>
+       <div class="nav-body-background">
+         <div class="idk">
+             <!-- Nav container -->
+        <nav class="nav-container">
+            <!-- logo container -->
+            <div class="logo-container" data-aos="fade-down" data-aos-duration="1000">
+                <!--logo-content-->
+                <div>
+                    <h4>Tems'</h4>
+                    <h1>Pastries</h1>
+                </div>
+            </div>
+            <!-- Pages-Container-->
+            <div class="pages-container"  data-aos="fade-down" data-aos-duration="1800">
+                <a href="#home"  data-aos="fade-down" data-aos-duration="2000">Home</a>
+                <a href="#product"  data-aos="fade-down" data-aos-duration="2200">Products</a>
+                <a href="#about"  data-aos="fade-down" data-aos-duration="2400">About Us</a>
+                <a href="#contact"  data-aos="fade-down" data-aos-duration="2600">Contact</a>
+            </div>
+            <!-- nav-icons-container -->
+            <div class="nav-icons-container"  data-aos="fade-down" data-aos-duration="2800">
+                <!-- nav-icons -->
+
+                <!-- 1 -->
+                <div class="search-icon-container">
+                    <button class="search-items icons" id="search">
+                        <img src="./search (1).png" alt="" width="20px">
+                    </button>
+                </div>
+
+                <!-- 2 -->
+                <div class="shopping-container">
+                    <button class="shopping icons" onclick="window.location.href='./products.html'">
+                        <img src="./shopping-cart.png" alt="" width="20px">
+                    </button>
+                </div>
+
+                <!-- 3 -->
+                <div class="message-icon-container">
+                    <button class="icons" onclick="window.location.href = './chat.html'">
+                        <img src="./message.png" alt="" width="20px" style="padding-top: 2px;">
+                    </button>
+                </div>
+
+                 <!-- 4 -->
+                 <div class="darkmode-icon-container">
+                    <button class="darkmode icons">
+                        <img src="./dark-mode.png" alt="" width="20px" style="padding-top: 2px;">
+                    </button>
+                </div>
+            </div>
+            <!--navigation bars-->
+            <div class="navigation-bar-container" data-aos="fade-down" data-aos-duration="2700">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+        <!-- phone screen navs -->
+        <div class="pages-container-800px"data-aos="fade-left" data-aos-duration="2700" >
+            <div class="page">
+                <a href="#home">Home</a>
+            </div>
+            <div class="page">
+                <a href="#product">Products</a>
+            </div>
+            <div class="page">
+                <a href="#about">About Us</a>
+            </div>
+            <div class="page">
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+        <!-- End of Nav -->
+
+        <!--input Field -->
+        <div class="input-containe">
+            <input type="text" class="search" id="input" placeholder="Search" style="display: none;">
+        </div>
+
+        <!-- body elements-->
+
+          <!-- Home-section-container  -->
+        <section id="home" data-aos="fade-right" data-aos-duration="3000">
+          <div>
+            <h1 class="opening-text" data-aos="fade-right" data-aos-duration="3000" style="color: #000">
+               Equisite taste for true connoisseurs! Baked into true perfection
+            </h1>
+            <a data-aos="fade-in" data-aos-duration="2700" href="#product">
+                Explore
+            </a>
+          </div>
+          <!-- second section of the home page -->
+            <div data-aos="zoom-in" data-aos-duration="3000"> 
+                <img src="./cakes.png" alt="" width="60%" class="home-img" >
+            </div>
+        </section>
+       </div>
+
+          <!-- Product-section-container  -->
+         <section id="product" data-aos="fade-up" data-aos-duration="3000">
+            <!-- title-container -->
+            <div class="title-container">
+                <h1>Our <span>Products</span></h1>
+                <div class="underline"></div>
+            </div>
+           <!-- contents -->
+           <div class="product-content">
+            <div class="first-product" data-aos="zoom-in-up" data-aos-duration="1500" draggable="true">
+                <!-- image-container -->
+                <div class="image-container">
+                    <img src="./pexels-brigitte-tohm-239578.jpg" alt="">
+                </div>
+                <!-- price and name of the product -->
+                <div class="price">
+                    <div class="name-container">
+                        <h3>Multi-Flavoured Donuts</h3>
+                    </div>
+                    <div class="price-container">
+                        <h3>₦2500</h3>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <h4>
+                        Hot Home-made multi-flavoured doughnuts at a very cheap price. A full bowl containing about 12 pieces of doughnuts.
+                    </h4>
+                </div>
+            </div>
+
+            <!-- product-two -->
+            <div class="first-product" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- image-container -->
+                <div class="image-container">
+                    <img src="./pexels-julias-torten-und-törtchen-1179002.jpg" alt="">
+                </div>
+                <!-- price and name of the product -->
+                <div class="price">
+                    <div class="name-container">
+                        <h3>Vanilla Cupcakes</h3>
+                    </div>
+                    <div class="price-container">
+                        <h3>₦700</h3>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <h4>Breath-taking vanilla cupcake going for ₦700 per piece.Order now and never regret it !</h4>
+                </div>
+            </div>
+
+            <!-- product-three -->
+            <div class="first-product" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- image-container -->
+                <div class="image-container">
+                    <img src="./pexels-archie-binamira-1027811.jpg" alt="" >
+                </div>
+                <!-- price and name of the product -->
+                <div class="price">
+                    <div class="name-container">
+                        <h3>Small-size Cake</h3>
+                    </div>
+                    <div class="price-container">
+                        <h3>₦5000</h3>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <h4>A two-step-small-sized cake containing multiple flavours like butter, chocolate and velvet.</h4>
+                </div>
+            </div>
+
+            <!-- fourth- product -->
+            <div class="first-product" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- image-container -->
+                <div class="image-container">
+                    <img src="./pexels-antony-trivet-13354489.jpg" alt="">
+                </div>
+                <!-- price and name of the product -->
+                <div class="price">
+                    <div class="name-container">
+                        <h3>Small Chops</h3>
+                    </div>
+                    <div class="price-container">
+                        <h3>₦700</h3>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <h4>Hot ravishing small chops.Price range varies depending on the plate size. Contents inlcude samosa, springrolls, puff-puff, chicken or beef depending on your preference</h4>
+                </div>
+            </div> 
+            
+            <!-- fifth-product -->
+            <div class="first-product" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- image-container -->
+                <div class="image-container">
+                    <img src="./pexels-pixabay-461431.jpg" alt="">
+                </div>
+                <!-- price and name of the product -->
+                <div class="price">
+                    <div class="name-container">
+                        <h3>Small-sized Cake</h3>
+                    </div>
+                    <div class="price-container">
+                        <h3>₦3000</h3>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <h4>Butter One step cake containing sweet strawberry on top. Place your order now!</h4>
+                </div>
+            </div> 
+            
+            <!-- sixth-product -->
+            <div class="first-product" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- image-container -->
+                <div class="image-container">
+                    <img src="./pexels-javon-swaby-1829423.jpg" alt="">
+                </div>
+                <!-- price and name of the product -->
+                <div class="price">
+                    <div class="name-container">
+                        <h3>Birthday Cake</h3>
+                    </div>
+                    <div class="price-container">
+                        <h3>₦10,000</h3>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <h4>Breath-taking sweet fluffy birthday cake containing multiple flavours which inlcude vanilla, chocolate, velvet, butter and many other. </h4>
+                </div>
+            </div>
+           </div>
+           <h2 class="see-more" style="padding-bottom: 20px;user-select: none; cursor: pointer;"onclick="window.location.href='./products.html'">See more!!</h2>
+        </section> 
+
+          <!-- about-section-container  -->
+        <section id="about" data-aos="fade-up" data-aos-duration="3000">
+            <div class="about-section-container">
+                <!-- About-content-container -->
+                <div class="about-content" data-aos="zoom-in-down" data-aos-duration="1500">
+                    <h1  class="about-header" style="color: black;">About Us</h1>
+                    <h2 class="about-sub">We are a restuarant that provides you with breath taken pastries both in retails and wholesales for various events.</h2>
+                    <p class="about-sub-content">Our main aim is to satify our customers with the ravishing and unique service we offer and we have been doing this for more than a year. We have completed over a hundred(100) orders and we have never disappointed. So what are you waiting for...head to the cart now and place an order!!</p>
+                </div>
+
+
+                <!-- About-mage-container -->
+                <div class="about-image-container" data-aos="flip-left" data-aos-duration="1500">
+                        <div class="about-image">
+                           <img src="./pexels-acharaporn-kamornboonyarush-1028704.jpg" alt="">
+                    </div>
+                   
+                </div>
+            </div>
+        <!--Frequently asked question  section -->
+        <div class="faqs-container" data-aos="fade-up"  data-aos-duration="2000">
+            <h1 class="faqs" style="color:#000">FREQUENTLY ASKED QUESTIONS</h1>
+            <div class="question">
+                <div class="question-title-container">
+                   <div>
+                    <h1 class="question-title">
+                       Do You Acccept all credit cards 
+                    </h1>
+                   </div>
+                   <div style="margin-left: 10px;">
+                    <button class="question-btn">+</button>
+                   </div>
+                </div>
+                <div class="answer-container">
+                    <h3 class="answer">
+                        Basically!! Payments from the purchase of a product would be made in cash or electronic transfer. If any Other necessary information regarding payments,We suggest you get in touch with us
+                    </h3>
+                </div>
+        </div>
+       
+        <!--2-->
+        <div class="question">
+            <div class="question-title-container">
+               <div>
+                <h1 class="question-title">
+                    Do you use Organic Ingredients
+                </h1>
+               </div>
+               <div style="margin-left: 10px;">
+                <button class="question-btn">+</button>
+               </div>
+            </div>
+            <div class="answer-container">
+                <h3 class="answer">
+                   Ingredients used in making our pastries are gotten fresh from the manufacturing company which makes out produdct more sophisticating!!
+                </h3>
+            </div>
+    </div>
+
+    <!--3-->
+    <div class="question">
+        <div class="question-title-container">
+           <div>
+            <h1 class="question-title">
+               Do You have any refund Policy
+            </h1>
+           </div>
+           <div style="margin-left: 10px;">
+            <button class="question-btn">+</button>
+           </div>
+        </div>
+        <div class="answer-container">
+            <h3 class="answer">
+                Yes!! We have a refund Policy which we sugggest every customer to go through before placing an order.
+            </h3>
+        </div>
+    </div>
+
+    <!--4 -->
+
+    <div class="question">
+        <div class="question-title-container">
+           <div>
+            <h1 class="question-title">
+               How reliable is your customer service
+            </h1>
+           </div>
+           <div style="margin-left: 10px;">
+            <button class="question-btn">+</button>
+           </div>
+        </div>
+        <div class="answer-container">
+            <h3 class="answer">
+               Our customer service is the best you'd ever ask for. We provide you a chat-application where you get immediate replies,You can also contact us by filling the information in the contact-us page which will take few minutes to reply to.
+            </h3>
+        </div>
+    </div>
+
+    
+    <!--5-->
+    <div class="question">
+        <div class="question-title-container">
+           <div>
+            <h1 class="question-title">
+                How fast and reliable are your delivery services
+            </h1>
+           </div>
+           <div style="margin-left: 10px;">
+            <button class="question-btn">+</button>
+           </div>
+        </div>
+        <div class="answer-container">
+            <h3 class="answer">
+                Deliveries are made between 7-12hrs depending on location and quantity after checkout has been made
+            </h3>
+        </div>
+    </div>
+    
+</div>
+</section>
+                <!-- Contact Us -->
+        <!-- Contact-section-container  -->
+          <section id="contact"  data-aos="zoom-in" data-aos-duration="1500">
+            <div class="contact-container">
+                <h1 >Contact Us</h1>
+                <div class="underline"></div>
+                <!-- Contact-content -->
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h2>Get In Touch</h2>
+                        <h3>We are here for you! How can we help?</h3>
+                        <div class="form">
+                            <div class="name-container">
+                                <label for="fullname">Enter your name</label>
+                                <input type="text" name="fullname" id="fullname" class="form-input">
+                            </div>
+
+                            <div class="email-container">
+                                <label for="email" class="label-2">Enter your email</label>
+                                <input type="email" name="email" id="email"  class="form-input">
+                            </div>
+
+                            <div class="text-container">
+                                <label for="text"  class="label-2">Tell us what's on your mind...</label>
+                                <input type="text" name="text" id="text"  class="form-input">
+                            </div>
+
+                            <div class="button-container">
+                                <button id="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company-info">
+                         <div class="tired" data-aos="fade-up" data-aos-duration="3000">
+                            <img src="./pexels-splitshire-1593.jpg" alt="" width="100%">
+                         </div>
+                        <div  class="contact-info">
+                            <div>
+                                <img src="./pin.png" alt="" class="icons" width="30px" style="padding: 4px;">
+                            </div>
+                            <div>
+                                <h3 style="margin-left: 10px;">16, Obadiah Street, Ipaja-Ayobo</h3>
+                            </div>
+                        </div>
+
+                        <div  class="contact-info">
+                            <div>
+                                <img src="./phone-call.png" alt="" class="icons" width="30px" style="padding: 4px;">
+                            </div>
+                            <div>
+                                <h3 style="margin-left: 10px;">+234-903-443-4108</h3>
+                            </div>
+                        </div>
+
+                        <div class="contact-info">
+                            <div>
+                                <img src="./email.png" alt="" class="icons" width="30px" style="padding: 4px;">
+                            </div>
+                            <div>
+                                <h3 style="margin-left: 10px;">oketunbi.olufunke@gmail.com</h3>
+                            </div>
+                        </div>
+
+                        <div  class="contact-info">
+                            <div>
+                                <img src="./message.png" alt="" class="icons" width="30px" style="padding: 4px;">
+                            </div>
+                            <div>
+                                <h3 style="margin-left: 10px;" onclick="window.location.href='./chat.html'">
+                                Chat with our agent</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <footer class="footer">
+           <div class="footer-container">
+                <div>
+                    <h2 class="quicklink">Quick Links</h2>
+                    <a href="#home">Home</a>
+                    <a href="#product">Product</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div style="margin-top: 7px;">
+                    <a href="#">Help Center</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Legal Notice</a>
+                    <a href="#">Terms of use</a>
+                </div>
+
+                <div style="margin-top: 4px;">
+                    <a href="#">Faq</a>
+                    <a href="#">Chat With us</a>
+                   <div class="news-letter-container">
+                    <h3 class="news-letter">News Letter</h3>
+                    <input type="text" name="" id="" class="news-letter-textfield">
+                    <button class="news-letter-btn">Send</button>
+                   </div>
+                </div>
+           </div>
+           <div style="text-align: center;">
+           <h3 class="last-text">All rights reserved &copy;<span class="current-date"></span> </h3>
+           <!--Footer Icons -->
+           <div class="footer-icon">
+
+            <!--icon-1-->
+            <div class="shopping-container" style="margin-left: 10px;">
+                <button class="icons" onclick="window.location.href = './products.html'">
+                    <img src="./shopping-cart.png" alt="" width="20px" >
+                </button>
+            </div>
+
+            <!--icon-2-->
+            <div class="message-icon-container" style="margin-left: 10px;">
+               <button  class="icons">
+                <img src="./message.png" alt="" width="20px" style="padding-top: 2px;" onclick="window.location.href= './chat.html'">
+               </button>
+            </div>
+
+             <!--icon-3-->
+             <div class="darkmode-icon-container" style="margin-left: 10px;">
+               <button class="darkmode icons">
+                    <img src="./dark-mode.png" alt=""  width="20px" style="padding-top: 2px;">
+               </button>
+            </div>
+
+             <!--icon-4-->
+             <div style="margin-left: 10px;">
+                <button  class="icons">
+                    <img src="./linkedin.png" alt="" width="20px" style="padding-top: 2px;">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+        </footer>
+
+        <!--top and bottom btns-->
+        <div class="top-botttom-container">
+               
+                <img src="./arrowhead-up.png" alt="" class="top-btn" style="cursor: pointer;">
+               <br>
+                 <img src="./down-arrow.png" alt="" class="bottom-btn" style="cursor: pointer;">
+               
+        </div>
+
+        <!--scripts for aos library and myjs file-->
+        <script src="./script.js"></script>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script> 
+    </body>
+</html>

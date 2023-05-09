@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Products</title>
+        <link rel="stylesheet" href="./products.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="nav-body-background">
+            <div class="idk">
+                <!-- Nav container -->
+           <nav class="nav-container">
+               <!-- logo container -->
+               <div class="logo-container" data-aos="fade-down" data-aos-duration="1000">
+                   <!--logo-content-->
+                   <div>
+                    <h4>Tems'</h4>
+                    <h1>Pastries</h1>
+                </div>
+               </div>
+               <!-- Pages-Container-->
+               <div class="pages-container"  data-aos="fade-down" data-aos-duration="1800">
+                   <a href="./index.html"  data-aos="fade-down" data-aos-duration="2000">Home</a>
+                   <a href="./index.html"  data-aos="fade-down" data-aos-duration="2200">Products</a>
+                   <a href="./index.html"  data-aos="fade-down" data-aos-duration="2400">About Us</a>
+                   <a href="./index.html"  data-aos="fade-down" data-aos-duration="2600">Contact</a>
+               </div>
+               <!-- nav-icons-container -->
+               <div class="nav-icons-container"  data-aos="fade-down" data-aos-duration="2800">
+                   <!-- nav-icons -->
+   
+                   <!-- 1 -->
+                   <div class="search-icon-container">
+                       <button class="search-items icons" id="search">
+                           <img src="./search (1).png" alt="" width="20px">
+                       </button>
+                   </div>
+   
+                   <!-- 2 -->
+                   <div class="shopping-container">
+                       <button class="shopping icons" id="cart">
+                           <img src="./shopping-cart.png" alt="" width="20px">
+                       </button>
+                       <div class="cart-notification"></div>
+                   </div>
+   
+                   <!-- 3 -->
+                   <div class="message-icon-container">
+                       <button class="icons" onclick="window.location.href = './chat.html'">
+                           <img src="./message.png" alt="" width="20px" style="padding-top: 2px;">
+                       </button>
+                   </div>
+   
+                    <!-- 4 -->
+                    <div class="darkmode-icon-container">
+                       <button class="darkmode icons">
+                           <img src="./dark-mode.png" alt="" width="20px" style="padding-top: 2px;">
+                       </button>
+                   </div>
+               </div>
+               <!--navigation bars-->
+               <div class="navigation-bar-container" data-aos="fade-down" data-aos-duration="2700">
+                   <div class="bar1"></div>
+                   <div class="bar2"></div>
+                   <div class="bar3"></div>
+               </div>
+           </nav>
+           <!-- phone screen navs -->
+           <div class="pages-container-800px"data-aos="fade-left" data-aos-duration="2700" >
+               <div class="page">
+                   <a href="./index.html">Home</a>
+               </div>
+               <div class="page">
+                   <a href="./index.html">Products</a>
+               </div>
+               <div class="page">
+                   <a href="./index.html">About Us</a>
+               </div>
+               <div class="page">
+                   <a href="./index.html">Contact</a>
+               </div>
+           </div>
+       </div>
+           <!-- End of Nav -->
+
+             <!--input Field -->
+        <div class="input-containe">
+            <input type="text" class="search" id="input" placeholder="Search" style="display: none;">
+        </div>
+
+        <!--state(to keep track of every action done on the website)-->
+        <div class="state-container">
+            <h3 class="state-content">State Tracker</h3>
+        </div>
+
+    </div>
+        <div class="container-store">
+            <div class="products-container">
+                <div class="header">
+                    <div class="nav">
+                        <h1 class="nav-title">Our Store</h1>
+                         <div class="underline"></div>
+                    </div>
+                    <p style="text-align: end; font-size: 17px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-weight: 900; cursor: pointer; user-select: none;" class="view-cart">view cart</p>
+                </div>
+            </div>
+                <div class="product-container">Loading</div>
+    
+        </div>
+             
+        <div class="all-cart-items">
+            <div class="display-cart-items">
+                <div class="close-cart-container">
+                    <button class="close-cart">X</button>
+                </div>
+                <div class="title-container">
+                    <div class="title">Your Bag</div>
+                </div>
+                <div class="checkout-container">
+                    <div class="total-amount-container">
+                        <div class="total-amount-label"> 
+                            <p>Total Bill:</p>
+                        </div>
+                       <div class="total-amount" id=`${id}`>
+                         <h3 id="total-amount">1200</h3>
+                    </div>
+                    </div>
+                    <div class="check-out-container" >
+                        <div class="checkout-btn buttons">
+                            <button onclick="checkOut()" style="cursor: pointer;">Check Out</button>
+                        </div>
+                        <div class="clear-cart-btn buttons">
+                            <button onclick="clearAllItemsInCart()" style="cursor: pointer;">Clear Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="display-cart">
+
+                    <h1>Cart is Empty</h1>
+                </div>
+            </div>
+
+            <div class="main-form-container">
+                <div class="close-form-container">
+                    <button class="close-form">X</button>
+                </div>
+                <div class="check-out-form-container">
+                    <div class="check-out-title-container">
+                        <h1 class="check-out-title">Check Out Form</h1>
+                    </div>
+                    
+                    <div class="check-out-form">
+                        <div class="name-container">
+                            <label for="name">Enter your Fullname</label>
+                            <input type="text" class="form-check-out" name="name" id="name">
+                        </div>
+    
+                        <div class="email-container">
+                            <label for="email">Enter your Email</label>
+                            <input type="text" class="form-check-out" name="email" id="email">
+                        </div>
+    
+                        <div class="address-container">
+                            <label for="address">Enter your Address</label>
+                            <input type="text" class="form-check-out" name="address" id="address">
+                        </div>
+    
+                        <div class="phone-container">
+                            <label for="phone">Enter your Phone-number</label>
+                            <input type="text" class="form-check-out" name="phone" id="phone">
+                        </div>
+    
+                        <div class="check-out-btn-container">
+                            <button class="check-out-btn" style="border: none;">Confirm Check-out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div style="margin-top: 20px;" class="footer-all-container">
+                <footer class="footer">
+                    <div class="footer-container">
+                         <div>
+                             <h2 class="quicklink">Quick Links</h2>
+                             <a href="./index.html">Home</a>
+                             <a href="./index.html">Product</a>
+                             <a href="./index.html">About Us</a>
+                             <a href="./index.html">Contact</a>
+                         </div>
+                         <div style="margin-top: 7px;">
+                             <a href="#">Help Center</a>
+                             <a href="#">Refund Policy</a>
+                             <a href="#">Legal Notice</a>
+                             <a href="#">Terms of use</a>
+                         </div>
+         
+                         <div style="margin-top: 4px;">
+                             <a href="#">Faq</a>
+                             <a href="#">Chat With us</a>
+                            <div class="news-letter-container">
+                             <h3 class="news-letter">News Letter</h3>
+                             <input type="text" name="" id="" class="news-letter-textfield">
+                             <button class="news-letter-btn" >Send</button>
+                            </div>
+                         </div>
+                    </div>
+                    <div style="text-align: center;">
+                    <h3 class="last-text">All rights reserved &copy;<span class="current-date"></span> </h3>
+                    <!--Footer Icons -->
+                    <div class="footer-icon">
+         
+                     <!--icon-1-->
+                     <div class="shopping-container" style="margin-left: 10px;">
+                         <button class="icons" id="cart" >
+                             <img src="./shopping-cart.png" alt="" width="20px">
+                         </button>
+                         <div class="cart-notification"></div>
+                     </div>
+         
+                     <!--icon-2-->
+                     <div class="message-icon-container" style="margin-left: 10px;">
+                        <button  class="icons">
+                         <img src="./message.png" alt="" width="20px" style="padding-top: 2px;" onclick="window.location.href= './chat.html'">
+                        </button>
+                     </div>
+         
+                      <!--icon-3-->
+                      <div class="darkmode-icon-container" style="margin-left: 10px;">
+                        <button class="darkmode icons">
+                             <img src="./dark-mode.png" alt=""  width="20px" style="padding-top: 2px;">
+                        </button>
+                     </div>
+         
+                      <!--icon-4-->
+                      <div style="margin-left: 10px;">
+                         <button  class="icons">
+                             <img src="./linkedin.png" alt="" width="20px" style="padding-top: 2px;">
+                         </button>
+                     </div>
+                    </div>
+                    </div>
+         
+                 </footer>
+            </div>
+
+        <script src="./product.js"></script>
+        <script src="./products.js"></script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width= device-width,initial-scale = 1.0">
+        <title>Chat-App</title>
+        <link rel="stylesheet" href="./chat.css">
+    </head>
+    <body>
+        <div class="chat-container">
+            <nav class="chat-nav">
+                <div onclick="window.location.href = './index.html'" style="margin-right: 100px; margin-left: 10px;" class="back">
+                  <img src="./back.png" alt="" width="30px">
+                </div>
+                <div>
+                    <h2>Chat-Box</h2>
+                </div>
+            </nav>
+            <div class="message-container">
+               
+            </div>
+            <div class="chat-otpions">
+                <button id="hello" onclick="hello()">I have issues regarding late delivery</button>
+                <button id="sam" onclick="sam()">I'd like to know more about the refund policy</button>
+                <button id="Json" onclick="json()">I am having issues checking out the products in the cart</button>
+            </div>
+            <div class="footer">
+                <div>
+                    <input type="text" id="text" class="text">
+                </div>
+                <div style="margin-left: 20px;">
+                    <button type="button" id="send">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./chat.js"></script>
+    </body>
+</html>
